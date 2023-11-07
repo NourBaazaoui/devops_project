@@ -13,10 +13,9 @@ services:
       - MYSQL_DATABASE=NourDB
     volumes:
       - db_vol:/var/lib/mysqldb
-    networks:
-      - my_network
 
-  departement_app:
+
+  backend_app:
     build: ./
     image: nour
     restart: unless-stopped
